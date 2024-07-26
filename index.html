@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .paraborder {
+        border: double;
+        border-left-style: ridge;
+        border-left-color: aqua;
+        border-top-width: 10px;
+        border-right: dotted;
+        border-block-end-width: 5px;
+        border-block-end-style: solid;
+        border-block-end-color: blue;
+        writing-mode: vertical-rl;
+      }
+
+      .p1 {
+        border: ridge;
+        border-width: 2px;
+        border-radius: 5px 5px;
+        position: absolute;
+        background-color: rgb(225, 255, 255);
+        border-color: rgb(14, 100, 53);
+      }
+
+      .p2 {
+        border: ridge;
+        border-width: 20px 20px 20px 20px;
+        border-image: url("download.jfif");
+      }
+    </style>
+  </head>
+  <body>
+    <div class="paraborder">
+      <p>test</p>
+    </div>
+    <p class="p1">text text text</p>
+    <br /><br />
+    <p class="p2">ok</p>
+  </body>
+</html>
