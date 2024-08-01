@@ -1,4 +1,9 @@
 /* Reset some default styles */
+html {
+    margin: 0;
+    padding: 0;
+}
+
 body,
 h1,
 h2,
@@ -16,13 +21,27 @@ body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
     color: #333;
+    background: linear-gradient(135deg, #e0eafc, #cfdef3);
+    /* Light gradient background */
+    margin: 0;
+    padding: 0;
 }
 
 header {
-    background: #333;
+    background: #424242;
     color: #fff;
     padding: 1rem;
     text-align: center;
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }
 
 header h1 {
@@ -35,6 +54,7 @@ header p {
 
 nav ul {
     list-style: none;
+    padding: 0;
 }
 
 nav ul li {
@@ -47,16 +67,18 @@ nav ul li a {
     text-decoration: none;
 }
 
+nav ul li a:hover {
+    color: grey;
+    transform: scale(1.1);
+}
+
 section {
     padding: 2rem;
-    margin: 1rem;
+    margin: 1rem auto;
+    max-width: 800px;
 }
 
 section h2 {
-    margin-bottom: 1rem;
-}
-
-.project {
     margin-bottom: 1rem;
 }
 
@@ -84,16 +106,105 @@ form button {
     cursor: pointer;
 }
 
-form button:hover {
+form button:hover,
+form button:focus {
     background: #555;
 }
 
-footer {
-    background: #333;
-    color: #fff;
+
+.nameBar a {
+    color: white;
+    text-decoration: none;
+}
+
+.nameBar a:hover {
+    color: aliceblue;
+    text-shadow: 2px 2px 2px white;
+}
+
+.navigationBar a {
+    text-decoration: none;
+    color: #fffdfd;
+    transition: transform 0.3s ease;
+}
+
+.navigationBar a:hover {
+    color: grey;
+    transform: scale(1.1);
+}
+
+.about p {
+    margin-top: 5px;
+}
+
+.about {
     text-align: center;
-    padding: 1rem;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
+}
+
+.contactSocials {
+    text-align: center;
+    /* Center the text and icons */
+    padding: 20px;
+    /* Padding around the section */
+}
+
+.contactSocials p {
+    margin-bottom: 10px;
+    font-weight: 700;
+    /* Space between the paragraph and the icons */
+}
+
+.socialscontainer {
+    display: flex;
+    /* Use flexbox for alignment */
+    justify-content: center;
+    /* Center the icons horizontally */
+    gap: 15px;
+    /* Space between the icons */
+}
+
+.socialmedia {
+    width: 40px;
+    /* Size of icons */
+    height: 40px;
+    /* Size of icons */
+    transition: transform 0.3s ease;
+    /* Smooth transition for hover effect */
+}
+
+.socialmedia:hover {
+    transform: scale(1.2);
+    /* Scale up the icon on hover */
+}
+
+
+#about {
+    padding: 20px;
+    background-color: transparent;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    /* Space between the left and right divs */
+    align-items: center;
+    /* Center items vertically */
+}
+
+.div-left {
+    flex: 1;
+    width: 50%;
+    padding: 20px;
+}
+
+.div-right {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.div-right img {
+    max-width: 100%;
+    height: auto;
 }
