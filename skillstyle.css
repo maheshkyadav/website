@@ -1,0 +1,173 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f7fa;
+    color: #333;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Header Styles */
+header {
+    background-color: #2C3E50;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+header .nameBar h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1.1em;
+    margin-bottom: 15px;
+    font-style: italic;
+}
+
+header nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 0;
+}
+
+header nav ul li a {
+    font-size: 1.1em;
+    color: #ecf0f1;
+    transition: color 0.3s, transform 0.3s;
+}
+
+header nav ul li a:hover {
+    color: #1ABC9C;
+    transform: scale(1.1);
+}
+
+/* Skills Section */
+#skills {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #ffffff;
+    margin-top: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+#skills h2 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    color: #2C3E50;
+}
+
+#skills p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    color: #7f8c8d;
+}
+
+#skills ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 0;
+    list-style-type: none;
+}
+
+#skills ul li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+#skills ul li img {
+    transition: transform 0.3s ease;
+    max-width: 50px;
+    max-height: 50px;
+}
+
+#skills ul li:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+#skills ul li img:hover {
+    transform: scale(1.1);
+}
+
+/* Footer Styles */
+footer {
+    background-color: #34495E;
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+
+footer p {
+    font-size: 1em;
+    font-style: italic;
+    letter-spacing: 1px;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    header p {
+        font-size: 1.2em;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    header nav ul li a {
+        font-size: 1.2em;
+    }
+
+    #skills h2 {
+        font-size: 2.2em;
+    }
+
+    #skills ul {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    #skills ul li img {
+        max-width: 40px;
+        max-height: 40px;
+    }
+}
+
+@media (max-width: 480px) {
+    header .nameBar h1 {
+        font-size: 2em;
+    }
+
+    header nav ul li a {
+        font-size: 1.1em;
+    }
+
+    #skills h2 {
+        font-size: 2em;
+    }
+
+    #skills ul li img {
+        max-width: 35px;
+        max-height: 35px;
+    }
+}

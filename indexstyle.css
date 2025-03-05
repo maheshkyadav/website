@@ -1,0 +1,223 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f7fa; /* Light background color */
+    color: #333; /* Dark text for contrast */
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+h1, h2, h3 {
+    font-weight: 600;
+}
+
+ul {
+    list-style-type: none;
+}
+
+/* Header Styles */
+header {
+    background-color: #2C3E50; /* Dark blue color */
+    color: white;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+header .nameBar h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1.1em;
+    margin-bottom: 15px;
+    font-style: italic;
+}
+
+header nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 0;
+}
+
+header nav ul li a {
+    font-size: 1.1em;
+    color: #ecf0f1; /* Light color for links */
+    transition: color 0.3s, transform 0.3s;
+}
+
+header nav ul li a:hover {
+    color: #1ABC9C; /* Teal color for hover */
+    transform: scale(1.1); /* Slight scaling on hover */
+}
+
+/* About Section */
+#about {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 40px auto;
+    padding: 20px;
+    max-width: 1200px;
+}
+
+#about .container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.div-left {
+    flex: 1;
+    max-width: 50%;
+}
+
+.div-left h1 {
+    font-size: 2.5em;
+    color: #2C3E50;
+    margin-bottom: 20px;
+    animation: fadeIn 1s ease-out;
+}
+
+.div-left p {
+    font-size: 1.1em;
+    color: #7f8c8d;
+    animation: fadeIn 1.2s ease-out;
+}
+
+.div-right {
+    flex: 1;
+    max-width: 45%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fadeInUp 1.5s ease-out;
+}
+
+.div-right img {
+    border-radius: 50%; /* Circular image */
+    border: 5px solid #fff; /* White border around image */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Soft shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 200px;
+    height: 200px;
+}
+
+.div-right img:hover {
+    transform: scale(1.1); /* Slight zoom effect */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+}
+
+/* Footer Styles */
+footer {
+    background-color: #34495E; /* Dark grey-blue */
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+
+footer p {
+    font-size: 1em;
+    font-style: italic;
+    letter-spacing: 1px;
+}
+
+/* Animation Definitions */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    header p {
+        font-size: 1.2em;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    header nav ul li a {
+        font-size: 1.2em;
+    }
+
+    #about .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .div-left, .div-right {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .div-left h1 {
+        font-size: 2.2em;
+    }
+
+    .div-left p {
+        font-size: 1.1em;
+    }
+
+    .div-right img {
+        width: 180px;
+        height: 180px;
+    }
+}
+
+@media (max-width: 480px) {
+    header .nameBar h1 {
+        font-size: 2em;
+    }
+
+    header nav ul li a {
+        font-size: 1.1em;
+    }
+
+    .div-left h1 {
+        font-size: 2em;
+    }
+
+    .div-left p {
+        font-size: 1em;
+    }
+
+    .div-right img {
+        width: 160px;
+        height: 160px;
+    }
+}
